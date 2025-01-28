@@ -1,0 +1,247 @@
+* {
+  font-family: sans-serif;
+}
+
+button {
+  border: 3px solid #512da8;
+  transition: 0.3s ease all;
+}
+
+button::before {
+  transition: 0.5s all ease;
+  position: absolute;
+  top: 0;
+  left: 50%;
+  right: 50%;
+  bottom: 0;
+  background-color: #512da8;
+  z-index: -1;
+  content: "";
+  opacity: 0;
+}
+
+button:hover, button:focus {
+  color: white;
+}
+
+button:hover::before, button:focus::before {
+  transition: 0.5s all ease;
+  left: 0;
+  right: 0;
+  opacity: 1;
+}
+
+/* Hero Section */
+
+.hero-content {
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+/* Services Section */
+
+.service-card-inner {
+  transition: transform 0.8s;
+  transform-style: preserve-3d;
+}
+
+.service-card:hover .service-card-inner {
+  transform: rotateY(180deg);
+}
+
+.service-card-front,
+.service-card-back {
+  box-shadow: 0 8px 14px 0 rgba(0, 0, 0, 0.2);
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
+
+.service-card-back {
+  transform: rotateY(180deg);
+}
+
+/* Team Section */
+
+.team-data {
+  opacity: 0;
+  transition: opacity 1s 1s;
+  left: 0;
+  right: 0;
+  margin-inline: auto;
+}
+
+.swiper-slide {
+  max-width: 20rem;
+}
+
+.team-card:hover .team-data {
+  animation: show-data 1s forwards;
+  opacity: 1;
+  transition: opacity 0.3s;
+}
+
+.team-card-image {
+  transition: all 0.5s;
+}
+
+.team-card:hover .team-card-image {
+  -webkit-filter: brightness(70%);
+  filter: brightness(70%);
+}
+
+.team-card:hover {
+  animation: remove-overflow 2s forwards;
+}
+
+.team-card:not(hover) {
+  animation: show-overflow 2s forwards;
+}
+
+.team-card:not(hover) .team-data {
+  animation: remove-data 1s forwards;
+}
+
+@keyframes show-data {
+  50% {
+    transform: translateY(-10rem);
+  }
+  100% {
+    transform: translateY(-7rem);
+  }
+}
+
+@keyframes remove-overflow {
+  to {
+    overflow: initial;
+  }
+}
+
+@keyframes remove-data {
+  0% {
+    transform: translateY(-7rem);
+  }
+  50% {
+    transform: translateY(-10rem);
+  }
+  100% {
+    transform: translateY(0.5rem);
+  }
+}
+
+@keyframes show-overflow {
+  0% {
+    overflow: initial;
+    pointer-events: none;
+  }
+  50% {
+    overflow: hidden;
+  }
+}
+
+/* Projects Section */
+
+.box1,
+.box2 {
+  transition: transform 0.5s;
+}
+
+.project-info:hover .box1 {
+  transform: translate(1rem, 1rem);
+}
+
+.project-info:hover .box2 {
+  transform: translate(-1rem, -1rem);
+}
+
+.project-hidden-info {
+  transition: opacity 0.5s;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.project-info:hover .project-hidden-info {
+  opacity: 1;
+}
+
+/* Testimonials section */
+
+/* .review-card-container div:nth-child(even) {
+  background-color: white;
+} */
+
+/* Screen sizes */
+
+@media screen and (max-width: 576px) {
+  .common-padding-margin {
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+  .header {
+    flex-direction: column;
+  }
+
+  .hero-content {
+    height: 100vh;
+    width: 100vw;
+  }
+
+  .about-us {
+    flex-direction: column;
+  }
+
+  .project-info {
+    margin: 32px 0;
+  }
+
+  .team-card {
+    width: 100%;
+  }
+}
+
+@media screen and (min-width: 577px) and (max-width: 768px) {
+  .about-us {
+    flex-direction: column;
+  }
+}
+
+@media screen and (min-width: 769px) and (max-width: 992px) {
+  .hero-image {
+    height: 500px;
+  }
+  .about-us-image {
+    width: 90rem;
+  }
+  .service-card {
+    width: 43%;
+  }
+  .contact-details {
+    width: 45%;
+  }
+  .feedback-form {
+    width: 45%;
+  }
+}
+
+@media screen and (min-width: 993px) {
+  .hero-image {
+    height: 600px;
+  }
+  .hero-content-2 {
+    display: flex;
+    justify-content: space-around;
+  }
+  .about-us-image {
+    width: 90rem;
+  }
+  .service-card {
+    width: 28%;
+  }
+  .contact-details {
+    width: 45%;
+  }
+  .feedback-form {
+    width: 45%;
+  }
+}
