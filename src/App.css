@@ -71,10 +71,6 @@ button:hover::before, button:focus::before {
   margin-inline: auto;
 }
 
-.swiper-slide {
-  max-width: 20rem;
-}
-
 .team-card:hover .team-data {
   animation: show-data 1s forwards;
   opacity: 1;
@@ -217,16 +213,16 @@ button:hover::before, button:focus::before {
     width: 43%;
   }
   .contact-details {
-    width: 45%;
+    width: 49%;
   }
   .feedback-form {
-    width: 45%;
+    width: 49%;
   }
 }
 
 @media screen and (min-width: 993px) {
   .hero-image {
-    height: 600px;
+    height: 650px;
   }
   .hero-content-2 {
     display: flex;
@@ -239,9 +235,9 @@ button:hover::before, button:focus::before {
     width: 28%;
   }
   .contact-details {
-    width: 45%;
+    width: 49%;
   }
   .feedback-form {
-    width: 45%;
+    width: 49%;
   }
 }

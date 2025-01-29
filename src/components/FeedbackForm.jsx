@@ -9,7 +9,6 @@ const FeedbackForm = () => {
   const inputProject = useRef();
   const inputMessage = useRef();
   const handleSubmitEvent = (event) => {
-    // event.preventDefault();
     alert("Form Submitted!");
   }
   return (
