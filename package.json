@@ -1,9 +1,9 @@
 {
+  "homepage": "https://pushpraj-upadhyay.github.io/Scallar-IT-Solutions",
   "name": "scallar",
   "private": true,
   "version": "0.0.0",
   "type": "module",
-  "homepage": "https://pushpraj-upadhyay.github.io/Scallar-IT-Solutions/",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
